@@ -1,3 +1,4 @@
 beautifulsoup4==4.12.2  # For HTML parsing and scraping
 requests==2.31.0       # For making HTTP requests
 streamlit==1.25.0      # For creating the web application
+pillow>=9.5.0
