@@ -1,4 +1,4 @@
 beautifulsoup4==4.12.2  # For HTML parsing and scraping
 requests==2.31.0       # For making HTTP requests
-re                     # Built-in library, no need to include in requirements.txt
+re==2.2.1                     # Built-in library, no need to include in requirements.txt
 streamlit==1.25.0      # For creating the web application
