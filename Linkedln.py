@@ -58,7 +58,7 @@ def linkedln(title,location):
         
         # Try to extract and store the job title
         try:
-            job_post["job_title"] = job_soup.find("h2", {"class":"top-card-layout__title font-sans text-lg papabear:text-xl font-bold leading-open text-color-text mb-0 topcard__title"}).text.strip() + " at " + job_soup.find("a", {"class": "topcard__org-name-link topcard__flavor--black-link"}).text.strip()
+            job_post["Job Title"] = job_soup.find("h2", {"class":"top-card-layout__title font-sans text-lg papabear:text-xl font-bold leading-open text-color-text mb-0 topcard__title"}).text.strip() + " at " + job_soup.find("a", {"class": "topcard__org-name-link topcard__flavor--black-link"}).text.strip()
         except:
             continue
             
@@ -66,13 +66,14 @@ def linkedln(title,location):
        
         # Try to extract and store the number of applicants
         try:
-            job_post["Location"] = location
+            job_post["Job Location"] = location
         except:
             continue
             
             
         try:
-            job_post["Link"] = job_url
+            job_post["Job Link"] = job_url
+            job_post['Job Source'] = "Linkedln"
         except:
             continue
         

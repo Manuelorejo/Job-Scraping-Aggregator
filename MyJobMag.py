@@ -37,13 +37,14 @@ def MyJobMag(search_term,location):
             try:
                 
                 job_location = location + ' State'
-                job_post['Location'] = job_location
+                job_post['Job Location'] = job_location
             except:
                 continue
             try:
                 
                 job_link =  base_url + job.h2.a['href']
                 job_post['Job Link'] = job_link
+                job_post["Job Source"] = "MyJobMag.com"
             except:
                 continue
             

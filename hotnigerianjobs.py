@@ -48,14 +48,14 @@ def hotnigerianjobs(search_term):
             
             try:
                 job_title = job.h1.text.strip()
-                job_post['job_title'] = job_title
+                job_post['Job Title'] = job_title
             except:
                 continue
             
             
             try: 
                 job_link  = job.find_all("span",class_="semibio")[1].a['href']
-                job_post['job_link'] = job_link
+                job_post['Job Link'] = job_link
                 
             except:
                 continue
@@ -64,7 +64,8 @@ def hotnigerianjobs(search_term):
                 
                 job_desc = job.find("div",class_ = 'mycase4')
                 job_location = extract_text(job_desc.text)
-                job_post['job_location'] = job_location
+                job_post['Job Location'] = job_location
+                job_post['Job Source'] = "hotnigerianjobs.com"
             except:
                 continue
                 
